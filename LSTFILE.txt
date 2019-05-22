@@ -1,0 +1,19 @@
+LINE NO.   ADDRESS  LABEL     OPCODE             OPERANDS           COMMENTS
+1          1000               START              1000                                           
+2          1000     LENGTH    RESW               1                                              
+3          1003     ARR       RESW               100                                            
+4          112F     ALPHA     RESW               1                                              
+5          1132     DELTA     RESW               1                                              
+6          1135     BETA      WORD               25                                             
+7          1138     GAMMA     WORD               4                                              
+8          113B               LDB                LENGTH                                         
+9          113E               BASE               LENGTH                                         
+10         113E               LDX                ALPHA+BETA+6                                   
+11         1141               ADDR               T,X                                            
+12         1143               +ADD               ALPHA                                          
+13         1003               ORG                ARR                                            
+14         1003               ADD                ALPHA,X                                        
+15         1006               LDA                @BETA                                          
+16         1009               LDA                ARR                                            
+17         100C               LDA                @BETA,X                                        
+18         100F               END                                                               
